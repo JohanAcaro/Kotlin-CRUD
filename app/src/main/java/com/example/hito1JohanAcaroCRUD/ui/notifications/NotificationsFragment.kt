@@ -31,8 +31,16 @@ class NotificationsFragment : Fragment() {
         var inidencia = binding.etIncidencia
 
         boton_enviar.setOnClickListener(){
+
             if(nombreIncidencia.text.toString().isNotEmpty() && inidencia.text.toString().isNotEmpty()){
                 Toast.makeText(this.context, "Incidencia enviada", Toast.LENGTH_SHORT).show()
+                try {
+                    Toast.makeText(this.context, "Incidencia enviada", Toast.LENGTH_SHORT).show()
+                }
+                catch (e:Exception){
+                    Toast.makeText(this.context, "Error al enviar la incidencia", Toast.LENGTH_SHORT).show()
+
+                }
                 nombreIncidencia.setText("")
                 inidencia.setText("")
             }else{

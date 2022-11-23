@@ -26,7 +26,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".Tramites"
+        <activity android:name=".TramitesActivity"
             android:label="@string/title_tramites"
             android:exported="true">
             <intent-filter>

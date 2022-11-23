@@ -58,14 +58,20 @@ class HomeFragment : Fragment() {
                     id.setText("")
                 }
             }
-            if (!existe){
-                dh.addProducto(Producto(i,n,u,p))
-                Toast.makeText(this.context, "Producto agregado", Toast.LENGTH_SHORT).show()
-                id.setText("")
-                nombre.setText("")
-                unidades.setText("")
-                precio.setText("")
+            try {
+                if (!existe){
+                    dh.addProducto(Producto(i,n,u,p))
+                    Toast.makeText(this.context, "Producto agregado", Toast.LENGTH_SHORT).show()
+                    id.setText("")
+                    nombre.setText("")
+                    unidades.setText("")
+                    precio.setText("")
+                }
             }
+            catch (e:Exception){
+                Toast.makeText(this.context, "Error al agregar", Toast.LENGTH_SHORT).show()
+            }
+
 
 
 

@@ -18,7 +18,7 @@
     <string name="btn_add">Añadir</string>
     <string name="btn_delete">Eliminar</string>
     <string name="textview5">Listado de productos</string>
-    <string name="btn_refresh">Actualizar</string>
+    <string name="btn_refresh">Refrescar</string>
     <string name="tv_Id">ID</string>
     <string name="tv_Nombre">NOMBRE</string>
     <string name="tv_Unidades">UNIDADES</string>
