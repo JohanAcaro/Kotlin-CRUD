@@ -23,12 +23,18 @@ class MainActivity : AppCompatActivity() {
 
         val btnLogin: Button = binding.btnLogin
         btnLogin.setOnClickListener() {
+
             println(etUser.text.toString())
-            if(etUser.text.toString()=="" || etPasswd.text.toString()=="")
-                Toast.makeText(this, "Es necesario que pongas un usuario y una contraseña", Toast.LENGTH_SHORT).show()
-            else{
-                val intent = Intent(this, Tramites::class.java)
-                startActivity(intent)
+            try {
+                if (etUser.text.toString() == "" && etPasswd.text.toString() == "") {
+                    Toast.makeText(this, "Escriba un usuario y una contraseña", Toast.LENGTH_SHORT).show()
+                } else {
+
+                    val intent = Intent(this, TramitesActivity::class.java)
+                    startActivity(intent)
+                }
+            } catch (e: Exception) {
+                Toast.makeText(this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show()
             }
 
         }

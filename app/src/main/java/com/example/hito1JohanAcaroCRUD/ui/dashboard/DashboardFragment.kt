@@ -41,15 +41,25 @@ class DashboardFragment : Fragment() {
 
         var listado=dh.getAllProducts()
 
-        recycler.layoutManager=LinearLayoutManager(this.context)
-        recycler.adapter=ProductoAdapter(this.context!!,listado)
+        try {
+            recycler.layoutManager = LinearLayoutManager(this.context)
+            recycler.adapter = ProductoAdapter(this.context!!, listado)
+        } catch (e: Exception) {
+            Toast.makeText(this.context, "Error al cargar los datos", Toast.LENGTH_SHORT).show()
+        }
 
         boton_refrescar.setOnClickListener(){
-            listado=dh.getAllProducts()
+            try {
+                listado=dh.getAllProducts()
 
-            recycler.layoutManager=LinearLayoutManager(this.context)
-            recycler.adapter=ProductoAdapter(this.context!!,listado)
-            Toast.makeText(this.context, "Lista actualizada", Toast.LENGTH_SHORT).show()
+                recycler.layoutManager=LinearLayoutManager(this.context)
+                recycler.adapter=ProductoAdapter(this.context!!,listado)
+                Toast.makeText(this.context, "Lista refrescada", Toast.LENGTH_SHORT).show()
+            }
+            catch (e:Exception){
+                Toast.makeText(this.context, "Error al refrescar la página", Toast.LENGTH_SHORT).show()
+            }
+
 
         }
 

@@ -10,7 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.hito1JohanAcaroCRUD.databinding.ActivityTramitesBinding
 
 
-class Tramites : AppCompatActivity() {
+class TramitesActivity : AppCompatActivity() {
     private lateinit var binding : ActivityTramitesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
