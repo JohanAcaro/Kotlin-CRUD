@@ -50,20 +50,23 @@ class HomeFragment : Fragment() {
 
 
             var listado=dh.getAllProducts()
+            var existe=false
             for (list in listado){
                 if (list.id==i){
                     Toast.makeText(this.context, "El id ya existe", Toast.LENGTH_SHORT).show()
-                    return@setOnClickListener
-                }
-                else{
-                    dh.addProducto(Producto(i,n,u,p))
-                    Toast.makeText(this.context, "Producto agregado", Toast.LENGTH_SHORT).show()
+                    existe=true
                     id.setText("")
-                    nombre.setText("")
-                    unidades.setText("")
-                    precio.setText("")
                 }
             }
+            if (!existe){
+                dh.addProducto(Producto(i,n,u,p))
+                Toast.makeText(this.context, "Producto agregado", Toast.LENGTH_SHORT).show()
+                id.setText("")
+                nombre.setText("")
+                unidades.setText("")
+                precio.setText("")
+            }
+
 
 
         }
