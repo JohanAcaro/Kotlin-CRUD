@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Aplicación CRUD</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Listado</string>
+    <string name="title_notifications">Contacto</string>
+    <string name="textview">Iniciar Sesión</string>
+    <string name="textview2">Tu usuario:</string>
+    <string name="et_user_hint">Escriba su usuario…</string>
+    <string name="textView3">Tu contraseña:</string>
+    <string name="et_pswd_hint">Escriba su contraseña…</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="title_tramites">Tramites</string>
+    <string name="textview4">Añadir Producto</string>
+    <string name="et_id_hint">Escriba su ID…</string>
+    <string name="et_nombre_hint">Escriba su nombre…</string>
+    <string name="et_unidades_hint">Escriba sus unidades…</string>
+    <string name="et_precio_hint">Escriba su precio</string>
+    <string name="btn_add">Añadir</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="textview5">Listado de productos</string>
+    <string name="btn_refresh">Actualizar</string>
+    <string name="tv_Id">ID</string>
+    <string name="tv_Nombre">NOMBRE</string>
+    <string name="tv_Unidades">UNIDADES</string>
+    <string name="tv_Precio">PRECIO</string>
+    <string name="textView8">Incidencia</string>
+    <string name="et_nombre_incidencia_hint">Escriba el nombre de la incidencia…</string>
+    <string name="et_incidencia_hint">Escriba su incidencia…</string>
+    <string name="btn_enviar">Enviar</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:orientation="vertical"
+    tools:context=".ui.notifications.NotificationsFragment" >
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginTop="18sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="20sp"
+        android:gravity="center_horizontal"
+        android:text="@string/textView8"
+        android:textColor="@android:color/background_light"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_nombre_incidencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="20sp"
+        android:ems="10"
+        android:hint="@string/et_nombre_incidencia_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_500"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_incidencia"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_marginLeft="18sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="20sp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/et_incidencia_hint"
+        android:inputType="textMultiLine"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_500" />
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginRight="18sp"
+        android:background="@color/purple_700"
+        android:text="@string/btn_enviar"
+        android:textColor="@android:color/background_light" />
+</LinearLayout>

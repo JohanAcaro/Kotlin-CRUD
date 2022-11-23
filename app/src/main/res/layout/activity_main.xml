@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+        android:gravity="center_horizontal"
+        android:text="@string/textview"
+        android:textColor="@android:color/background_light"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/et_user_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_500"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_passwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/et_pswd_hint"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_500"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="18sp"
+        android:background="@color/purple_700"
+        android:text="@string/btn_login"
+        android:textColor="@android:color/background_light" />
+
+</LinearLayout>

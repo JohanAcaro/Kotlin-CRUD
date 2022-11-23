@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginTop="18sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="10sp"
+        android:gravity="center_horizontal"
+        android:text="@string/textview4"
+        android:textColor="@android:color/background_light"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="15sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/et_id_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/purple_700"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/purple_500" />
+
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="15sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/et_nombre_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_500"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/et_unidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="15sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/et_unidades_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_500"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/et_precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginRight="18sp"
+        android:layout_marginBottom="15sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/et_precio_hint"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/purple_700"
+        android:textColorHint="@color/purple_500"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="18sp"
+        android:background="@color/purple_700"
+        android:text="@string/btn_add"
+        android:textColor="@android:color/background_light" />
+</LinearLayout>
