@@ -39,8 +39,15 @@ class DataHelper(context: Fragment) : SQLiteOpenHelper(
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL("DROP TABLE IF EXISTS $NOMBRE_TABLE")
-        onCreate(db)
+        try {
+            if (db != null) {
+                db.execSQL("DROP TABLE IF EXISTS $NOMBRE_TABLE")
+                onCreate(db)
+            }
+        }
+        catch (e: Exception){
+            println("error al actualizar la tabla")
+        }
     }
 
     fun addProducto(producto: Producto) {
