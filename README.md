@@ -4,3 +4,5 @@ Aplicacón CRUD en Kotlin version 28.
 Incluye un login sencillo y un diseño de navegación por tabs.
 <br>
 Implementación de clases Activity y Fragment
+<br>
+Proyecto realizado en Android Studio
