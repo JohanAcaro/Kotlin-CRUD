@@ -39,7 +39,8 @@ class DataHelper(context: Fragment) : SQLiteOpenHelper(
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+        db?.execSQL("DROP TABLE IF EXISTS $NOMBRE_TABLE")
+        onCreate(db)
     }
 
     fun addProducto(producto: Producto) {
