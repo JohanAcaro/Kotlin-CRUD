@@ -33,7 +33,6 @@ class NotificationsFragment : Fragment() {
         boton_enviar.setOnClickListener(){
 
             if(nombreIncidencia.text.toString().isNotEmpty() && inidencia.text.toString().isNotEmpty()){
-                Toast.makeText(this.context, "Incidencia enviada", Toast.LENGTH_SHORT).show()
                 try {
                     Toast.makeText(this.context, "Incidencia enviada", Toast.LENGTH_SHORT).show()
                 }
