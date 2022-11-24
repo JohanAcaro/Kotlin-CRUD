@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
             println(etUser.text.toString())
             try {
-                if (etUser.text.toString() == "" && etPasswd.text.toString() == "") {
+                if (etUser.text.toString() == "" || etPasswd.text.toString() == "") {
                     Toast.makeText(this, "Escriba un usuario y una contraseña", Toast.LENGTH_SHORT).show()
                 } else {
 

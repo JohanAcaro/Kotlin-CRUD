@@ -17,7 +17,6 @@ import com.example.hito1JohanAcaroCRUD.databinding.FragmentDashboardBinding
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -32,13 +31,10 @@ class DashboardFragment : Fragment() {
 
         val root: View = binding.root
         var recycler: RecyclerView =binding.rvProductos
-
-
         var boton_refrescar: TextView = binding.btnRefresh
-
         val dh = DataHelper(this)
-        println(dh)
 
+        println(dh)
         var listado=dh.getAllProducts()
 
         try {
@@ -59,15 +55,9 @@ class DashboardFragment : Fragment() {
             catch (e:Exception){
                 Toast.makeText(this.context, "Error al refrescar la página", Toast.LENGTH_SHORT).show()
             }
-
-
         }
-
-
-
         return root
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
