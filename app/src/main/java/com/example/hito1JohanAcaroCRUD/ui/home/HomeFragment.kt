@@ -1,5 +1,6 @@
 package com.example.hito1JohanAcaroCRUD.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -43,38 +44,40 @@ class HomeFragment : Fragment() {
 
 
         boton_add.setOnClickListener(){
-            var i = Integer.parseInt(id.text.toString())
-            var n=nombre.text.toString()
-            var u=Integer.parseInt(unidades.text.toString())
-            var p=precio.text.toString()
 
+            if (id.toString()=="" || nombre.text.toString()=="" || unidades.toString()=="" || precio.text.toString()==""){
+                Toast.makeText(this.context, "Rellene todos los campos", Toast.LENGTH_SHORT).show()
 
-            var listado=dh.getAllProducts()
-            var existe=false
-            for (list in listado){
-                if (list.id==i){
-                    Toast.makeText(this.context, "El id ya existe", Toast.LENGTH_SHORT).show()
-                    existe=true
-                    id.setText("")
+            }else{
+                var i = Integer.parseInt(id.text.toString())
+                var n=nombre.text.toString()
+                var u=Integer.parseInt(unidades.text.toString())
+                var p=precio.text.toString()
+
+                var listado=dh.getAllProducts()
+                var existe=false
+                for (list in listado){
+                    if (list.id==i){
+                        Toast.makeText(this.context, "El id ya existe", Toast.LENGTH_SHORT).show()
+                        existe=true
+                        id.setText("")
+                    }
+                }
+                try {
+                    if (!existe){
+                        dh.addProducto(Producto(i,n,u,p))
+                        Toast.makeText(this.context, "Producto agregado", Toast.LENGTH_SHORT).show()
+                        id.setText("")
+                        nombre.setText("")
+                        unidades.setText("")
+                        precio.setText("")
+                    }
+                }
+                catch (e:Exception){
+                    Toast.makeText(this.context, "Error al agregar", Toast.LENGTH_SHORT).show()
                 }
             }
-            try {
-                if (!existe){
-                    dh.addProducto(Producto(i,n,u,p))
-                    Toast.makeText(this.context, "Producto agregado", Toast.LENGTH_SHORT).show()
-                    id.setText("")
-                    nombre.setText("")
-                    unidades.setText("")
-                    precio.setText("")
-                }
-            }
-            catch (e:Exception){
-                Toast.makeText(this.context, "Error al agregar", Toast.LENGTH_SHORT).show()
-            }
-
-
         }
-
         return root
     }
 
